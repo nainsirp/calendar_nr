@@ -3,6 +3,7 @@ import './CalendarComponent.css';
 
 const DAYS_OF_WEEK = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
+<<<<<<< HEAD
 const HOLIDAYS = {
   // Global & US Holidays
   '0-1': "New Year's Day",
@@ -33,15 +34,20 @@ const HOLIDAYS = {
   '10-8': "Diwali"              // Nov 8
 };
 
+=======
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
 const MonthGrid = ({
   currentMonth,
   currentYear,
   startDate,
   setStartDate,
+<<<<<<< HEAD
   endDate,
   setEndDate,
   hoverDate,
   setHoverDate,
+=======
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
   onPrevMonth,
   onNextMonth,
   flipDirection
@@ -54,6 +60,7 @@ const MonthGrid = ({
     const clickedDate = new Date(currentYear, currentMonth, day);
     clickedDate.setHours(0,0,0,0);
     
+<<<<<<< HEAD
     if (startDate && !endDate) {
       if (clickedDate.getTime() < startDate.getTime()) {
         setEndDate(startDate);
@@ -77,6 +84,19 @@ const MonthGrid = ({
     } else if (!day) {
       setHoverDate(null);
     }
+=======
+    // Toggle single selection off if clicked again, otherwise select it
+    if (startDate && startDate.getTime() === clickedDate.getTime()) {
+      setStartDate(null);
+    } else {
+      setStartDate(clickedDate);
+    }
+  };
+
+  const isSelected = (day) => {
+    if (!day || !startDate) return false;
+    return new Date(currentYear, currentMonth, day).getTime() === startDate.getTime();
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
   };
 
   const renderDays = () => {
@@ -90,13 +110,18 @@ const MonthGrid = ({
     for (let i = firstDayIndex - 1; i >= 0; i--) {
       days.push(
         <div key={`prev-${i}`} className="date-cell prev-month">
+<<<<<<< HEAD
           <span className="date-num">{prevMonthDays - i}</span>
+=======
+          {prevMonthDays - i}
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
         </div>
       );
     }
 
     // Current month days
     for (let i = 1; i <= totalDays; i++) {
+<<<<<<< HEAD
         const currentDate = new Date(currentYear, currentMonth, i);
         currentDate.setHours(0,0,0,0);
         const t = currentDate.getTime();
@@ -144,17 +169,26 @@ const MonthGrid = ({
         }
 
         const holidayName = HOLIDAYS[`${currentMonth}-${i}`];
+=======
+        let className = "date-cell current-month";
+        if (isSelected(i)) className += " selected";
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
 
         days.push(
             <div 
               key={`current-${i}`} 
               className={className}
               onClick={() => handleDateClick(i)}
+<<<<<<< HEAD
               onMouseEnter={() => handleDateHover(i)}
               title={holidayName || ""}
             >
               <span className="date-num">{i}</span>
               {holidayName && <div className="holiday-dot" />}
+=======
+            >
+              <span className="date-num">{i}</span>
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
             </div>
         );
     }
@@ -165,7 +199,11 @@ const MonthGrid = ({
     for (let i = 1; i <= totalCells - currentCells; i++) {
        days.push(
         <div key={`next-${i}`} className="date-cell next-month">
+<<<<<<< HEAD
           <span className="date-num">{i}</span>
+=======
+          {i}
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
         </div>
       );
     }
@@ -194,7 +232,11 @@ const MonthGrid = ({
         ))}
       </div>
 
+<<<<<<< HEAD
       <div className="dates-grid" onMouseLeave={() => handleDateHover(null)}>
+=======
+      <div className="dates-grid">
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
         {renderDays()}
       </div>
     </div>

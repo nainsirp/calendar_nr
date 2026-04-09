@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 # 📅 Calendarr
 
 An Interactive, Premium Wall Calendar Application built with **React** and **Vite**. Calendarr provides an aesthetically pleasing interface with rich seasonal hero images for each month, beautiful hover animations, and a built-in month-by-month "Tasks & Notes" list that automatically saves to your local storage.
 
+=======
+# 📅 Calendar
+
+An Interactive, Premium Wall Calendar Application built with **React** and **Vite**. Calendarr provides an aesthetically pleasing interface with rich seasonal hero images for each month, beautiful hover animations, and a built-in month-by-month "Tasks & Notes" list that automatically saves to your local storage.
+
+This application is structurally complete and deployed to platforms vercel, you can have a view here - https://calendar-drab-nine.vercel.app/
+
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
 ## ✨ Features
 
 - **Dynamic Wall Calendar**: Smoothly navigate through months and years.
@@ -50,8 +59,11 @@ npm run build
 ```
 The optimized files will be outputted to the `dist` folder, ready to be deployed.
 
+<<<<<<< HEAD
 ## 🌐 Deployment
 
 This application is structurally complete and deployed to platforms vercel, you can have a view here - 
 
 Simply push your code to your GitHub repository and import the project into Vercel—the default Vite build settings will be automatically detected!
+=======
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc

@@ -212,6 +212,7 @@
   border-radius: 50%;
 }
 
+<<<<<<< HEAD
 .holiday-dot {
   position: absolute;
   bottom: 12%; 
@@ -230,6 +231,8 @@
   opacity: 1;
 }
 
+=======
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
 .date-cell.prev-month, .date-cell.next-month {
   color: var(--text-muted);
   font-weight: 400;
@@ -247,6 +250,7 @@
   transform: scale(0.95);
 }
 
+<<<<<<< HEAD
 .date-cell .date-num {
   position: relative;
   z-index: 2;
@@ -314,6 +318,14 @@
 }
 .date-cell.range-end.is-hover:not(.single-date)::after {
   opacity: 0.08;
+=======
+.date-cell.selected {
+  background: var(--accent-color);
+  color: var(--accent-text);
+  box-shadow: 0 4px 10px var(--accent-light);
+  z-index: 5;
+  border-radius: 12px;
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
 }
 
 /* --- Notes Panel --- */
@@ -324,6 +336,7 @@
   height: 100%;
 }
 
+<<<<<<< HEAD
 .notes-tabs {
   display: flex;
   gap: 15px;
@@ -379,6 +392,30 @@
   letter-spacing: 0.05em;
 }
 
+=======
+.notes-header {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.notes-header h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  transform: translateY(8px);
+  transition: color 0.3s ease;
+}
+
+.notes-header h3:hover {
+  color: var(--accent-color);
+}
+
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
 .notes-list-container {
   flex-grow: 1;
   overflow-y: auto;

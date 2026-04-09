@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './CalendarComponent.css';
 
+<<<<<<< HEAD
 const NotesPanel = ({ currentMonth, currentYear, selectedDate }) => {
   const [activeTab, setActiveTab] = useState('monthly');
   
   const monthKey = `tasks-${currentYear}-${currentMonth}`;
   const dayKey = selectedDate ? `tasks-${selectedDate.getFullYear()}-${selectedDate.getMonth()}-${selectedDate.getDate()}` : null;
   const noteKey = activeTab === 'monthly' ? monthKey : (dayKey || monthKey);
+=======
+const NotesPanel = ({ currentMonth, currentYear }) => {
+  const noteKey = `tasks-${currentYear}-${currentMonth}`;
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
@@ -45,6 +50,7 @@ const NotesPanel = ({ currentMonth, currentYear, selectedDate }) => {
 
   return (
     <div className="notes-panel">
+<<<<<<< HEAD
       <div className="notes-tabs">
         <button 
           className={`notes-tab ${activeTab === 'monthly' ? 'active' : ''}`}
@@ -66,6 +72,12 @@ const NotesPanel = ({ currentMonth, currentYear, selectedDate }) => {
           {selectedDate.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })}
         </div>
       )}
+=======
+      <div className="notes-header">
+        <h3>Tasks & Notes</h3>
+      </div>
+      
+>>>>>>> 8ec1ebdb1f9d86fa94cf2dba00c484e9f22cfcbc
       <div className="notes-list-container">
         {tasks.length === 0 ? (
           <p className="no-tasks-msg">No tasks yet. Add one below!</p>
