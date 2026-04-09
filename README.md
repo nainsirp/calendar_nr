@@ -2,7 +2,7 @@
 
 An Interactive, Premium Wall Calendar Application built with **React** and **Vite**. Calendarr provides an aesthetically pleasing interface with rich seasonal hero images for each month, beautiful hover animations, and a built-in month-by-month "Tasks & Notes" list that automatically saves to your local storage.
 
-This application is structurally complete and deployed to platforms vercel, you can have a view here - https://calendarproject-eight.vercel.app/
+This application is structurally complete and deployed to platforms vercel, you can have a view here - https://calendar-drab-nine.vercel.app/
 
 ## ✨ Features
 
